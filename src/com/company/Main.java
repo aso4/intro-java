@@ -3,20 +3,21 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        double myDouble = 7.8; // double precision floating point number
+        int loop = 0;
 
-        int value = 0;
+        while(true) {
 
-        while(value < 10)
-        {
-            value = value + 1;
-        }
+            if(loop == 5) {
+                break;
+            }
+            else if(loop < 3) {
+                System.out.printf("printf while loop is less than 3. Loop = %d", loop);
+            }
+            else {
+                System.out.println("println if loop is 3 or 4. Loop = " + loop);
+            }
 
-        for(int i=0; i < 5; i = i + 1) {
-            System.out.printf("The value of i is: %d\n", i); // printf = format specifier.
-            // printf doesn't print new line with it.
-            // output: The value of i is: 0The value of i is: 1The value of i is: 2The value of i is: 3The value of i is: 4
-            // therefore add \n
+            loop++;
         }
     }
 }
