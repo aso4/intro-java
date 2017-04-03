@@ -4,15 +4,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in); // initialize object
+        Scanner scanner = new Scanner(System.in);
 
-        // output prompt
-        System.out.println("Enter a line of text: ");
+        int value = 0;
+        do  {
+            System.out.println("Enter a number: ");
+            int value = scanner.nextInt();
+        }
+        while(value != 5);
 
-        // wait for user to enter double
-        Double value = input.nextDouble();
-
-        System.out.println("You inputted " + value);
-
+        System.out.println("Got 5!");
     }
 }
