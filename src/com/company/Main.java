@@ -1,23 +1,18 @@
 package com.company;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        int loop = 0;
+        Scanner input = new Scanner(System.in); // initialize object
 
-        while(true) {
+        // output prompt
+        System.out.println("Enter a line of text: ");
 
-            if(loop == 5) {
-                break;
-            }
-            else if(loop < 3) {
-                System.out.printf("printf while loop is less than 3. Loop = %d", loop);
-            }
-            else {
-                System.out.println("println if loop is 3 or 4. Loop = " + loop);
-            }
+        // wait for user to enter line of text
+        String line = input.nextLine();
 
-            loop++;
-        }
+        System.out.println("You inputted " + line);
+
     }
 }
