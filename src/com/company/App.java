@@ -1,12 +1,26 @@
-class Robot {
-    public void speak(String text) {
-        System.out.println(text);
+class Frog {
+    private String name; // can't access outside class. encapsulation enforced.
+    private int age;
+
+    public void setName(String name) {
+        this.name = name; // reference to object you're in. only need it when there's ambiguity.
     }
-    public void jump(int height) {
-        System.out.println("Jumping " + height + " feet.");
+
+    public void setAge(int age) {
+        this.age = age;
     }
-    public void move(String direction, double distance) {
-        System.out.println("Moving " + distance + " meters in direction " + direction + ".");
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setInfo(String name, int age) {
+        setName(name);
+        setAge(age);
     }
 }
 
@@ -14,9 +28,11 @@ public class App {
 
     public static void main(String[] args) {
 
-        Robot sam = new Robot();
-        sam.speak("I'm Sam");
-        sam.jump(20);
-        sam.move("West", 12.2);
+        Frog frog1 = new Frog();
+        frog1.setAge(1);
+        frog1.setInfo("Ben", 12);
+
+        System.out.println(frog1.getName());
+        System.out.println(frog1.getAge());
     }
 }
