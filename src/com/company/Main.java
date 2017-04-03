@@ -3,17 +3,15 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        //non-primitive types
+        double myDouble = 7.8; // double precision floating point number
 
-        int myInt = 7;
+        int value = 0;
 
-        String text = "Hello"; // object
+        while(value < 10)
+        {
+            System.out.println("hello " + value);
 
-        System.out.println(text);
-
-        System.out.println("Hello" + " " + "Bob");
-
-        System.out.println("My integer is: " + myInt);
-
+            value = value + 1;
+        }
     }
 }
