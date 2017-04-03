@@ -1,26 +1,21 @@
-class Frog {
-    private String name; // can't access outside class. encapsulation enforced.
-    private int age;
+class Machine {
+    private String name;
+    private int code;
 
-    public void setName(String name) {
-        this.name = name; // reference to object you're in. only need it when there's ambiguity.
+    public Machine() {
+        this("Arnie", 0); // call constructor
+        System.out.println("Constructor running.");
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public Machine(String name) { // works like a set method. if argument passed in, Java looks for constructor that passes in string.
+        System.out.println("Second constructor running.");
+        this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setInfo(String name, int age) {
-        setName(name);
-        setAge(age);
+    public Machine(String name, int code) {
+        System.out.println("Third constructor running.");
+        this.name = name;
+        this.code = code;
     }
 }
 
@@ -28,11 +23,11 @@ public class App {
 
     public static void main(String[] args) {
 
-        Frog frog1 = new Frog();
-        frog1.setAge(1);
-        frog1.setInfo("Ben", 12);
+        Machine machine1 = new Machine();
 
-        System.out.println(frog1.getName());
-        System.out.println(frog1.getAge());
+        Machine machine2 = new Machine("Bertie");
+
+        Machine machine3 = new Machine("Arnie", 7);
+
     }
 }
