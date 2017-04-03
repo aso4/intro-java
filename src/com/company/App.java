@@ -3,8 +3,22 @@ class Person {
     String name;
     int age;
 
-    void speak() {
-        System.out.println("Hello, my name is " + name + ", I'm " + age + " years old.");
+    void speak() { // returns nothing
+        System.out.println("Hello, my name is " + name);
+    }
+
+    int yearsToRetirement() {
+        int yearsLeft = 65 - age;
+
+        return yearsLeft;
+    }
+
+    int getAge() { // getter methods
+        return age;
+    }
+
+    String getName() {
+        return name;
     }
 }
 
@@ -17,10 +31,12 @@ public class App {
         person1.age = 37;
         person1.speak();
 
-        Person person2 = new Person();
-        person2.name = "Sarah Smith";
-        person2.age = 20;
-        person2.speak();
+        int years = person1.yearsToRetirement();
+        int age = person1.getAge();
+        String name = person1.getName();
 
+        System.out.println("Years to retirement: " + years);
+        System.out.println("Name is: " + name);
+        System.out.println("Age is: " + age);
     }
 }
