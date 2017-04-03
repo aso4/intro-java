@@ -1,24 +1,12 @@
-class Person {
-
-    String name;
-    int age;
-
-    void speak() { // returns nothing
-        System.out.println("Hello, my name is " + name);
+class Robot {
+    public void speak(String text) {
+        System.out.println(text);
     }
-
-    int yearsToRetirement() {
-        int yearsLeft = 65 - age;
-
-        return yearsLeft;
+    public void jump(int height) {
+        System.out.println("Jumping " + height + " feet.");
     }
-
-    int getAge() { // getter methods
-        return age;
-    }
-
-    String getName() {
-        return name;
+    public void move(String direction, double distance) {
+        System.out.println("Moving " + distance + " meters in direction " + direction + ".");
     }
 }
 
@@ -26,17 +14,9 @@ public class App {
 
     public static void main(String[] args) {
 
-        Person person1 = new Person();
-        person1.name = "Joe Bloggs";
-        person1.age = 37;
-        person1.speak();
-
-        int years = person1.yearsToRetirement();
-        int age = person1.getAge();
-        String name = person1.getName();
-
-        System.out.println("Years to retirement: " + years);
-        System.out.println("Name is: " + name);
-        System.out.println("Age is: " + age);
+        Robot sam = new Robot();
+        sam.speak("I'm Sam");
+        sam.jump(20);
+        sam.move("West", 12.2);
     }
 }
