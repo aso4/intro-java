@@ -9,10 +9,10 @@ public class Main {
         // output prompt
         System.out.println("Enter a line of text: ");
 
-        // wait for user to enter line of text
-        String line = input.nextLine();
+        // wait for user to enter double
+        Double value = input.nextDouble();
 
-        System.out.println("You inputted " + line);
+        System.out.println("You inputted " + value);
 
     }
 }
