@@ -4,22 +4,25 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        int value = 7;
 
-        System.out.println("Please enter a command: ");
-        String text = input.nextLine();
+        int[] values;
 
-        switch(text) {
-            case "start": // case must be a constant, can't perform checks using blocks containing conditionals
-                System.out.println("Machine started!");
-                break;
-            case "stop":
-                System.out.println("Stopped.");
-                break;
+        values = new int[3]; // allocates memory to hold 3 integers
+        values[0] = 10;
 
-            default:
-                System.out.println("Not recognized");
+        System.out.println(values[0]);
+        System.out.println(values[1]);
+        System.out.println(values[2]);
 
+        for(int i=0; i<values.length; i++) {
+            System.out.println(values[i]);
+        }
+
+        int[] numbers = {5, 6, 7}; // specify the values at initialization
+
+        for(int i=0; i<numbers.length; i++) {
+            System.out.println(numbers[i]);
         }
     }
 }
