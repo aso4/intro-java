@@ -9,9 +9,14 @@ public class Main {
 
         while(value < 10)
         {
-            System.out.println("hello " + value);
-
             value = value + 1;
+        }
+
+        for(int i=0; i < 5; i = i + 1) {
+            System.out.printf("The value of i is: %d\n", i); // printf = format specifier.
+            // printf doesn't print new line with it.
+            // output: The value of i is: 0The value of i is: 1The value of i is: 2The value of i is: 3The value of i is: 4
+            // therefore add \n
         }
     }
 }
