@@ -4,15 +4,22 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        int value = 0;
-        do  {
-            System.out.println("Enter a number: ");
-            int value = scanner.nextInt();
+        System.out.println("Please enter a command: ");
+        String text = input.nextLine();
+
+        switch(text) {
+            case "start": // case must be a constant, can't perform checks using blocks containing conditionals
+                System.out.println("Machine started!");
+                break;
+            case "stop":
+                System.out.println("Stopped.");
+                break;
+
+            default:
+                System.out.println("Not recognized");
+
         }
-        while(value != 5);
-
-        System.out.println("Got 5!");
     }
 }
